@@ -1,6 +1,6 @@
 {
   "name": "npm-email-templates",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "shared templates for transactional npm emails.",
   "main": "index.js",
   "scripts": {
