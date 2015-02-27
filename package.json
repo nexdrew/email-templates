@@ -2,17 +2,15 @@
   "name": "npm-email-templates",
   "version": "1.3.0",
   "description": "shared templates for transactional npm emails.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/npm/email-templates.git"
   },
   "keywords": [
     "email",
-    "templates"
+    "mail",
+    "templates",
+    "handlebars"
   ],
   "author": "npm <support@npmjs.com>",
   "license": "ISC",
