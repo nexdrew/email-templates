@@ -1,20 +1,17 @@
-You are receiving this because you (or someone else) requested that the email address of the '{{name}}' npm user account be changed from
-    <{{email1}}>
-to:
-    <{{email2}}>
+You are receiving this because you (or someone else) requested that the email address of the '{{name}}' npm user account be changed.
 
-Please click the following link, or paste into your browser to complete the process.
+old address: <{{email1}}>
+new address: <{{email2}}>
 
-    {{! 604800 = one week }}
-    {{host}}/email-edit/confirm/{{{tokenHelper name=name email=changeEmailFrom email2=changeEmailTo token=confToken prefix="email_change_conf_" ttl=604800}}}
+To complete the process, click the following link or paste it into your browser:
 
+{{! 604800 = one week }}
+{{host}}/email-edit/confirm/{{{tokenHelper name=name email=changeEmailFrom email2=changeEmailTo token=confToken prefix="email_change_conf_" ttl=604800}}}
 
 If you received this in error, you can safely ignore it.
 
-The request will expire shortly.
+The request will expire in one week.
 
-You can reply to this message, or email
-    {{from}}
-if you have any questions.
+If you have any questions, reply to this message or send an email to {{from}}.
 
 npm loves you.
