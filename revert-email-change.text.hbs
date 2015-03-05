@@ -1,13 +1,13 @@
 You are receiving this because you (or someone else) requested that the email address of the '{{name}}' npm user account be changed.
 
-old address: <{{email1}}>
-new address: <{{email2}}>
+old address: <{{changeEmailFrom}}>
+new address: <{{changeEmailTo}}>
 
-If this was intentional, you can safely ignore this message. However, a confirmation email was sent to <{{email2}}> with a link that must be clicked to complete the process.
+If this was intentional, you can safely ignore this message. However, a confirmation email was sent to <{{changeEmailTo}}> with a link that must be clicked to complete the process.
 
 IMPORTANT: If this was NOT intentional, then your account MAY have been compromised.  Please click the following link to revert the change immediately:
 
-{{host}}/email-edit/revert/{{{tokenHelper name=name email1=email1 email2=email2 token=revToken confToken=confToken prefix="email_change_rev_"}}}
+{{host}}/email-edit/revert/{{{tokenHelper name=name changeEmailFrom=changeEmailFrom changeEmailTo=changeEmailTo token=revToken confToken=confToken prefix="email_change_rev_"}}}
 
 And then visit {{host}} and change your password right away.
 
