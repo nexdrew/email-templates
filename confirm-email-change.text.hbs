@@ -1,12 +1,12 @@
 You are receiving this because you (or someone else) requested that the email address of the '{{name}}' npm user account be changed.
 
-old address: <{{email1}}>
-new address: <{{email2}}>
+old address: <{{changeEmailFrom}}>
+new address: <{{changeEmailTo}}>
 
 To complete the process, click the following link or paste it into your browser:
 
 {{! 604800 = one week }}
-{{host}}/email-edit/confirm/{{{tokenHelper name=name email=changeEmailFrom email2=changeEmailTo token=confToken prefix="email_change_conf_" ttl=604800}}}
+{{host}}/email-edit/confirm/{{{tokenHelper name=name changeEmailFrom=changeEmailFrom changeEmailTo=changeEmailTo token=confToken prefix="email_change_conf_" ttl=604800}}}
 
 If you received this in error, you can safely ignore it.
 
