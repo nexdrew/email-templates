@@ -3,22 +3,29 @@ Hi {{name}},
 Thanks for trying out npm Enterprise!
 
 To get started, make sure you have a machine that meets the installation requirements:
+
 https://docs.npmjs.com/enterprise/installation#requirements
 
 Then simply run
 
-`npm install npme`
+sudo npm install npme -g --unsafe
 
-That's it! When prompted, provide the following information:
+Once installation is complete visit
+https://your-server-address:8800 and bypass the security warning (you can provide your own certificate later to prevent this warning). You will
+be presented with a management UI which allows you to configure your npm Enterprise appliance.
+
+During the configuration process you will be prompted for your email and license key:
 
 billing email: {{email}}
 license key: {{license_key}}
 
-For help with the other questions asked during the installation, installation instructions and other docs are here:
+Once you've configured everything, npm Enterprise will be up and running on
+http://your-server-address:8080. Where `your-server-address` is the host name or IP of the machine you have installed npm Enterprise on.
+
+For help with the other questions asked during the installation, read the installation instructions and other documentation:
 
 https://docs.npmjs.com/enterprise/installation
 
-If you have any problems, just reply to this message or email {{support_email}}.
-
+If you have any problems, please email {{support_email}}.
 
 npm loves you.
