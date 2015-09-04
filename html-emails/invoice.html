@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>npm invoice</title>
+<style type="text/css">
+/* -------------------------------------
+    GLOBAL
+------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  width: 100% !important;
+  height: 100%;
+  line-height: 1.6;
+}
+
+/* Let's make sure all tables have defaults */
+table td {
+  vertical-align: top;
+}
+
+/* -------------------------------------
+    BODY & CONTAINER
+------------------------------------- */
+body {
+  background-color: #DEE0E2;
+}
+
+.body-wrap {
+  background-color: #DEE0E2;
+  width: 100%;
+}
+
+.container {
+  display: block !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  /* makes it centered */
+  clear: both !important;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding: 20px;
+}
+
+/* -------------------------------------
+    HEADER, FOOTER, MAIN
+------------------------------------- */
+.main {
+  background: #fff;
+  border: 1px solid #BBBBBB;
+  border-radius: 0px;
+}
+
+.thanks {
+	border-top: 1px solid #e9e9e9;
+}
+
+.content-wrap {
+  padding: 20px;
+}
+
+.content-block {
+  padding: 0 0 20px;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer {
+  width: 100%;
+  clear: both;
+  color: #999;
+  padding: 20px;
+}
+.footer a {
+  color: #999;
+}
+.footer p, .footer a, .footer unsubscribe, .footer td {
+  font-size: 12px;
+}
+
+/* -------------------------------------
+    GRID AND COLUMNS
+------------------------------------- */
+.column-left {
+  float: left;
+  width: 50%;
+}
+
+.column-right {
+  float: left;
+  width: 50%;
+}
+
+/* -------------------------------------
+    TYPOGRAPHY
+------------------------------------- */
+h1, h2, h3 {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 20px 0 0px;
+  line-height: 1.35;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+	font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p, ul, ol {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+p li, ul li, ol li {
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+/* -------------------------------------
+    LINKS & BUTTONS
+------------------------------------- */
+a {
+	color:#c8373c;
+  text-decoration: none;
+}
+
+/* -------------------------------------
+    OTHER STYLES THAT MIGHT BE USEFUL
+------------------------------------- */
+.last {
+  margin-bottom: 0;
+}
+
+.first {
+  margin-top: 0;
+}
+
+.padding {
+  padding: 10px 0;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* -------------------------------------
+    Alerts
+------------------------------------- */
+.alert {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+}
+.alert a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.alert.alert-warning {
+  background: #ff9f00;
+}
+.alert.alert-bad {
+  background: #d0021b;
+}
+.alert.alert-good {
+  background: #68b90f;
+}
+
+/* -------------------------------------
+    INVOICE
+------------------------------------- */
+.invoice {
+  margin: 40px auto;
+  text-align: left;
+  width: 80%;
+}
+.invoice td {
+  padding: 5px 0;
+}
+.invoice .invoice-items {
+  width: 100%;
+}
+.invoice .invoice-items td {
+  border-top: #eee 1px solid;
+}
+.invoice .invoice-items .total td {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  font-weight: 700;
+}
+
+/* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+@media only screen and (max-width: 640px) {
+  h1, h2, h3, h4 {
+    font-weight: 600 !important;
+    margin: 20px 0 5px !important;
+  }
+
+  h1 {
+    font-size: 22px !important;
+  }
+
+  h2 {
+    font-size: 18px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .content, .content-wrapper {
+    padding: 10px !important;
+  }
+
+  .invoice {
+    width: 100% !important;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" width="600">
+			<div class="content">
+				<table class="main" width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="content-wrap aligncenter">
+							<table width="100%" cellpadding="0" cellspacing="0">
+
+								<tr>
+									<td class="content-block">
+										<h1>$52.98 Paid</h1>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="content-block thanks">
+										<h2> &nbsp;thanks for using npm&nbsp; </h2>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="content-block thanks">
+										<table class="invoice">
+											<tr>
+												<td><b>June 01 2014</b><br/><br/>Lee Munroe<br/>Invoice #12345-1292<br/>MasterCard 1221</td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+													<table class="invoice-items" cellpadding="0" cellspacing="0">
+														<tr>
+															<td>npm-paid-individual-user-7</td>
+															<td class="alignright">$ 7.99</td>
+														</tr>
+														<tr>
+															<td>organization : @wombat-wisdwom</td>
+															<td class="alignright">$ 14.99</td>
+														</tr>
+														<tr>
+															<td>organization : @autopilot-boat</td>
+															<td class="alignright">$ 35.99</td>
+														</tr>
+														<tr>
+															<td colspan="2">&nbsp;</td>
+														</tr>
+														<tr class="total">
+															<td class="alignright" width="80%">Total</td>
+															<td class="alignright">$ 52.98</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="content-block">
+											<img src="img/npm-logo-120.png" />
+									</td>
+								</tr>
+								<tr>
+									<td class="content-block">
+										1999 Harrison Suite 1150, Oakland 94612
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<div class="footer">
+					<table width="100%">
+						<tr>
+							<td class="aligncenter content-block">questions? email : <a href="mailto:">support@npmjs.com</a></td>
+						</tr>
+					</table>
+				</div></div>
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+</body>
+</html>
