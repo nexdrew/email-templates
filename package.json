@@ -17,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/npm/email-templates/issues"
   },
-  "homepage": "https://github.com/npm/email-templates"
+  "homepage": "https://github.com/npm/email-templates",
+  "devDependencies": {
+    "ava": "^0.9.1",
+    "babel-eslint": "^5.0.0-beta6",
+    "handlebars": "^4.0.5",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "pretest": "standard",
+    "test": "ava"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
 }
