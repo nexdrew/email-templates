@@ -22,9 +22,9 @@ test('expansion of text', async t => {
     license_key: '00000000-0000-0000-0000-000000000000',
     support_email: 'support@npmjs.com'
   })
-  t.ok(text.match(/Hi Fundip Stick,/))
+  t.ok(text.match(/Hi Fundip Stick—/))
   t.ok(text.match(/billing email: jiminy@cricket\.xyz/))
   t.ok(text.match(/license key: 00000000-0000-0000-0000-000000000000/))
-  t.ok(text.match(/just drop us a line at support@npmjs\.com/))
+  t.ok(text.match(/support@npmjs\.com/))
   t.ok(text.match(/npm loves you/))
 })

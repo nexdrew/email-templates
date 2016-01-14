@@ -1,30 +1,88 @@
-Hi {{name}},
+Hi {{name}}—
 
-Thanks for trying out npm On-Site!
+Welcome to npm On-Site! This email contains info you’ll need to get up and
+running with your own private registry.
 
-To get started, make sure you have a machine that meets the installation requirements:
+If you run into any trouble along the way, don’t hesitate to reach out: just
+reply to this note or drop us a line at {{support_email}}.
 
-https://docs.npmjs.com/enterprise/installation#requirements
-
-Then simply run
-
-sudo npm install npmo -g --unsafe
-
-Once installation is complete, visit
-https://your-server-address:8800 and bypass the security warning — later, you can provide your own certificate to prevent this warning. You’ll be presented with a management UI that allows you to configure your npm On-Site appliance.
-
-During the configuration process you will be prompted for your email and license key:
-
-billing email: {{email}}
-license key: {{license_key}}
-
-Once you’ve configured everything, npm On-Site will be up and running on http://your-server-address:8080, where `your-server-address` is the host name or IP of the machine on which you’ve installed npm On-Site.
-
-For help with the other questions we ask during installation, read the installation instructions and other documentation:
-
-https://docs.npmjs.com/enterprise/installation
-
-If you have any problems, just drop us a line at {{support_email}}.
+npm loves you
 
 
-npm loves you.
+Your License Key
+
+You’ll need this to activate your On-Site instances during installation.
+
+    billing email: {{email}}
+    license key: {{license_key}}
+
+
+Quick-Start Guide
+
+This is the fastest way to get started: https://docs.npmjs.com/enterprise/intro
+
+(We’ve also included step-by-step instructions below.)
+
+
+Important URLs
+
+Your registry will be available at http://<your-server>:8080
+
+Your registry’s website will be available at http://<your-server>:8081
+
+Your admin web console will be available at https://<your-server>:8800
+
+
+4 Steps To Getting Started With npm On-Site:
+
+1. Install npm On-Site on your server
+
+    Make sure your server fulfills the prerequisites and has Node.js installed —
+    then use npm to install npmo!
+
+    Prerequisites can be found here:
+    https://docs.npmjs.com/enterprise/requirements
+
+    Details on server installation can be found here:
+    https://docs.npmjs.com/enterprise/installation
+
+
+2. Configure and start your On-Site instance
+
+    The npm On-Site installer will run an admin web console on port 8800. Access
+    it using https and use it to complete installation and configure your
+    On-Site appliance.
+
+    Details on server configuration can be found here:
+    https://docs.npmjs.com/enterprise/server-configuration
+
+
+3. Configure the npm CLI to talk to your registry
+
+    On your development machine, authenticate with your On-Site registry and
+    associate it with a scope name, like @myco, using this command:
+
+    `npm login --scope=@myco --registry=http://<your-server>:8080`
+
+    The scope will be a shared namespace for your company's private packages.
+
+    Details on client configuration can be found here:
+    https://docs.npmjs.com/enterprise/client-configuration
+
+
+4. Publish and install packages
+
+    Prefix private package names with your scope, e.g. @myco/my-package, then
+    publish them to your On-Site registry using `npm publish`.
+
+    Install private packages using their scoped name, e.g.
+    `npm install @myco/my-package`.
+
+    Details on using your On-Site registry can be found here:
+    https://docs.npmjs.com/enterprise/using-it
+
+
+What’s Next / More Info
+
+For more details and advanced topics, see all of our npm On-Site documentation:
+https://docs.npmjs.com/enterprise/index
