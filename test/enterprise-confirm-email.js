@@ -2,20 +2,20 @@ import test from 'ava'
 import { loadTemplate } from './_utils'
 
 test('expansion of meta', async t => {
-  const template = await loadTemplate('enterprise-confirm-email.meta.hbs')
-  const metaString = template({
+  let template = await loadTemplate('enterprise-confirm-email.meta.hbs')
+  let metaString = template({
     email: 'nunya@biznazz.yo',
     from: 'website@npmjs.com'
   })
-  const meta = JSON.parse(metaString)
+  let meta = JSON.parse(metaString)
   t.is(meta.subject, 'Welcome to npm On-Site! Please verify your email address')
   t.is(meta.to, '"nunya@biznazz.yo" <nunya@biznazz.yo>')
   t.is(meta.from, '"npm, Inc." <website@npmjs.com>')
 })
 
 test('expansion of text', async t => {
-  const template = await loadTemplate('enterprise-confirm-email.text.hbs')
-  const text = template({
+  let template = await loadTemplate('enterprise-confirm-email.text.hbs')
+  let text = template({
     host: 'https://www.npmjs.com',
     email: 'jiminy@cricket.xyz',
     verification_key: '00000000-0000-0000-0000-000000000000',

@@ -2,21 +2,21 @@ import test from 'ava'
 import { loadTemplate } from './_utils'
 
 test('expansion of meta', async t => {
-  const template = await loadTemplate('charge-failed.meta.hbs')
-  const metaString = template({
+  let template = await loadTemplate('charge-failed.meta.hbs')
+  let metaString = template({
     name: 'Exquisite Disaster',
     email: 'nunya@biznazz.yo',
     from: 'website@npmjs.com'
   })
-  const meta = JSON.parse(metaString)
+  let meta = JSON.parse(metaString)
   t.is(meta.subject, 'npm, Inc.: charge failed')
   t.is(meta.to, '"Exquisite Disaster" <nunya@biznazz.yo>')
   t.is(meta.from, '"npm, Inc." <website@npmjs.com>')
 })
 
 test('expansion of text', async t => {
-  const template = await loadTemplate('charge-failed.text.hbs')
-  const text = template({
+  let template = await loadTemplate('charge-failed.text.hbs')
+  let text = template({
     amount: '$700.00',
     card: '9876',
     support_email: 'support@npmjs.com'
