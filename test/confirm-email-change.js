@@ -13,13 +13,13 @@ test.after(t => {
 })
 
 test('expansion of meta', async t => {
-  const template = await loadTemplate('confirm-email-change.meta.hbs')
-  const metaString = template({
+  let template = await loadTemplate('confirm-email-change.meta.hbs')
+  let metaString = template({
     name: 'Exquisite Disaster',
     changeEmailTo: 'nunya@biznazz.yo',
     from: 'website@npmjs.com'
   })
-  const meta = JSON.parse(metaString)
+  let meta = JSON.parse(metaString)
   t.is(meta.subject, 'Please confirm your new npm email')
   t.is(meta.to, '"Exquisite Disaster" <nunya@biznazz.yo>')
   t.is(meta.from, '"npm, Inc." <website@npmjs.com>')
@@ -27,8 +27,8 @@ test('expansion of meta', async t => {
 })
 
 test('expansion of text', async t => {
-  const template = await loadTemplate('confirm-email-change.text.hbs')
-  const text = template({
+  let template = await loadTemplate('confirm-email-change.text.hbs')
+  let text = template({
     name: 'fidget',
     changeEmailFrom: 'hello.fidget@gmail.co',
     changeEmailTo: 'f@idg.et',

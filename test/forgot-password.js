@@ -13,13 +13,13 @@ test.after(t => {
 })
 
 test('expansion of meta', async t => {
-  const template = await loadTemplate('forgot-password.meta.hbs')
-  const metaString = template({
+  let template = await loadTemplate('forgot-password.meta.hbs')
+  let metaString = template({
     name: 'Exquisite Disaster',
     email: 'nunya@biznazz.yo',
     from: 'support@npmjs.com'
   })
-  const meta = JSON.parse(metaString)
+  let meta = JSON.parse(metaString)
   t.is(meta.subject, 'Your npm password reset')
   t.is(meta.to, '"Exquisite Disaster" <nunya@biznazz.yo>')
   t.is(meta.from, '"npm, Inc. support" <support@npmjs.com>')
@@ -27,8 +27,8 @@ test('expansion of meta', async t => {
 })
 
 test('expansion of text', async t => {
-  const template = await loadTemplate('forgot-password.text.hbs')
-  const text = template({
+  let template = await loadTemplate('forgot-password.text.hbs')
+  let text = template({
     name: 'fidget',
     host: 'https://www.npmjs.com',
     support_email: 'support@npmjs.com'
