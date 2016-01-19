@@ -1,6 +1,6 @@
 # npm-email-templates
 
-[![build status](https://img.shields.io/travis/npm/email-templates.svg)](https://travis-ci.org/npm/email-templates)
+[![build status](https://travis-ci.org/npm/email-templates.svg)](https://travis-ci.org/npm/email-templates)
 
 shared templates for transactional npm emails.
 
