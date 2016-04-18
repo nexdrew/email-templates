@@ -1,6 +1,6 @@
 Hi {{name}}—
 
-Welcome to npm On-Site! This email contains info you’ll need to get up and
+Welcome to npm Enterprise! This email contains info you’ll need to get up and
 running with your own private registry.
 
 If you run into any trouble along the way, don’t hesitate to reach out: just
@@ -11,15 +11,15 @@ npm loves you
 
 Your License Key
 
-You’ll need this to activate your On-Site instances during installation.
+You’ll need this to activate your Enterprise instances during installation.
 
     billing email: {{email}}
     license key: {{license_key}}
 
 
-Quick-Start Guide
+npm Enterprise AMI
 
-This is the fastest way to get started: https://docs.npmjs.com/enterprise/intro
+Running our npm Enterprise AMI is fastest way to get started: http://blog.npmjs.org/post/142409778875/run-npm-enterprise-on-aws-with-just-a-few-clicks
 
 (We’ve also included step-by-step instructions below.)
 
@@ -33,12 +33,12 @@ Your registry’s website will be available at http://<your-server>:8081
 Your admin web console will be available at https://<your-server>:8800
 
 
-4 Steps To Getting Started With npm On-Site:
+4 Steps To Getting Started With npm Enterprise:
 
-1. Install npm On-Site on your server
+1. Install npm Enterprise on your server
 
     Make sure your server fulfills the prerequisites and has Node.js installed —
-    then use npm to install npmo!
+    then use npm to install npme!
 
     Prerequisites can be found here:
     https://docs.npmjs.com/enterprise/requirements
@@ -47,11 +47,11 @@ Your admin web console will be available at https://<your-server>:8800
     https://docs.npmjs.com/enterprise/installation
 
 
-2. Configure and start your On-Site instance
+2. Configure and start your Enterprise instance
 
-    The npm On-Site installer will run an admin web console on port 8800. Access
+    The npm Enterprise installer will run an admin web console on port 8800. Access
     it using https and use it to complete installation and configure your
-    On-Site appliance.
+    Enterprise appliance.
 
     Details on server configuration can be found here:
     https://docs.npmjs.com/enterprise/server-configuration
@@ -59,7 +59,7 @@ Your admin web console will be available at https://<your-server>:8800
 
 3. Configure the npm CLI to talk to your registry
 
-    On your development machine, authenticate with your On-Site registry and
+    On your development machine, authenticate with your Enterprise registry and
     associate it with a scope name, like @myco, using this command:
 
     `npm login --scope=@myco --registry=http://<your-server>:8080`
@@ -73,16 +73,16 @@ Your admin web console will be available at https://<your-server>:8800
 4. Publish and install packages
 
     Prefix private package names with your scope, e.g. @myco/my-package, then
-    publish them to your On-Site registry using `npm publish`.
+    publish them to your Enterprise registry using `npm publish`.
 
     Install private packages using their scoped name, e.g.
     `npm install @myco/my-package`.
 
-    Details on using your On-Site registry can be found here:
+    Details on using your Enterprise registry can be found here:
     https://docs.npmjs.com/enterprise/using-it
 
 
 What’s Next / More Info
 
-For more details and advanced topics, see all of our npm On-Site documentation:
+For more details and advanced topics, see all of our npm Enterprise documentation:
 https://docs.npmjs.com/enterprise/index

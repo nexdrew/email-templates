@@ -1,6 +1,6 @@
 {
   "name": "npm-email-templates",
-  "version": "1.10.1",
+  "version": "1.11.0",
   "description": "shared templates for transactional npm emails.",
   "repository": {
     "type": "git",

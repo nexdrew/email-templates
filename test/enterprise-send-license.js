@@ -9,7 +9,7 @@ test('expansion of meta', async t => {
     from: 'website@npmjs.com'
   })
   let meta = JSON.parse(metaString)
-  t.is(meta.subject, 'Your npm On-Site license')
+  t.is(meta.subject, 'Your npm Enterprise license')
   t.is(meta.to, '"Exquisite Disaster" <nunya@biznazz.yo>')
   t.is(meta.from, '"npm, Inc." <website@npmjs.com>')
 })
