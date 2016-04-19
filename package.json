@@ -22,11 +22,13 @@
     "ava": "^0.9.1",
     "babel-eslint": "^5.0.0-beta6",
     "handlebars": "^4.0.5",
-    "standard": "^5.4.1"
+    "standard": "^5.4.1",
+    "standard-version": "^2.1.2"
   },
   "scripts": {
     "pretest": "standard",
-    "test": "ava"
+    "test": "ava",
+    "release": "standard-version"
   },
   "standard": {
     "parser": "babel-eslint"
